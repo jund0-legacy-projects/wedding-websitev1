@@ -59,9 +59,8 @@
 				
 			</section>
 			
-			<section class="container-fluid section-content"
-				data-top="opacity: 1" 
-				data--90p-top="opacity: 0"
+			<section id="intro"  class="container-fluid section-content"
+				data-top="opacity: 0" data-center="opacity: 1" 
 			>
 				<h1 class="text-center">Our Story</h1>	
 				<h2 class="text-center">in our own words</h2>
@@ -155,22 +154,18 @@
 			</section>
 		</section>
 	</main>
-	<footer data-end="background-color: rgb(233, 163, 145)" data-25-end="background-color: rgb(212,208,181)">
-	    <div class="wrapper clearfix">
-	        <p class="text-center">&copy; 2015 Alfredo Loves Joanna</p>
-	    </div>
-	</footer>	
+	<!--<footer data-end="background-color: rgb(233, 163, 145)" data-65-end="background-color: rgb(212,208,181)">-->
+	<footer data-bottom="background-color: rgb(233, 163, 145)" data-25-bottom="background-color: rgb(212,208,181)">
+        <div class="wrapper clearfix">
+            <p>&copy; 2014 footerText</p>
+        </div>
+    </footer>
 
 <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
 	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="libs/skrollr/dist/skrollr.min.js"></script>
     <script type="text/javascript">
-    var s = skrollr.init({
-                render: function(data) { 
-                    $('#offset').text(data.curTop);
-                },
-                forceHeight : false
-            });
+    
     </script>
 
         <script src="js/plugins.js"></script>
