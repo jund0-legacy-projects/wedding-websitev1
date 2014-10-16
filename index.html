@@ -20,14 +20,27 @@
 	  </style>
 	<![endif]-->
 	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsUBFe4LlkVQ3LCk6yNJ9bbMk3f5XF3To&sensor=false&libraries=places"> </script>
 </head>
-<body>
+<body> 
+
 	<!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="offset"> 10 </div>   
+    <!--<div id="offset"> 10 </div>  --> 
 	<header class="header-container">
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+			data-anchor-target="#main-landing"
+            data-top-bottom="background-color:rgb(255,255,255);"
+         	data-top="background-color:rgb(0,0,0);"
+		>-->
+		<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+			data-anchor-target="#main-landing"
+            data-top="opacity: 0"
+            data-top-bottom="opacity: 1"
+         	
+		>-->
+		<nav class="navbar navbar-default navbar-fixed-top nav-wrapper" role="navigation">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -37,17 +50,27 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">LOGO</a>
+		      <a class="navbar-brand" href="#">Alfredo <span class="glyphicon glyphicon-heart-empty"></span> Joanna</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="main-nav">
-		      <ul class="nav navbar-nav navbar-right">
-		        <li class="active"><a href="#">Link</a></li>
-		        <li><a href="#">Link</a></li>
-		        
-		      </ul>
-		      
+		      <div class="menu-container" style="">
+			      <div id="menu-icon" >
+			      	<img src="img/succulent-nav.png" class="img-responsive">
+			      </div>
+			      <div class="menu-header" >
+				      <ul class="nav navbar-nav ">
+				        <li class="active"><a href="#">Our Wedding Party</a></li>
+				        <li><span>|</span></li>
+				        <li class=""><a href="#">Our Gallery</a></li>
+				        <li><span>|</span></li>
+				        <li class=""><a href="location.html">Where are We celebrating?</a></li>
+				        <li><span>|</span></li>
+				        <li><a href="#">Contact Us</a></li>
+				      </ul>
+			      </div>
+		      </div>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>		
@@ -55,13 +78,55 @@
 	<main>
 		<section id="content">
 			<section id="main-landing">
-				<div id="home-landscape"></div>
-				
+				<div id="home-landscape" class="block">
+					<div class="centered">
+						<h2 id="wDate">April 25 2015</h2>
+						<div class="center-piece container">
+							<div class="row">
+								<div class="col-md-4">
+								<h1 id="groom">Alfredo</h1>
+								</div>
+								<div class="col-md-4">
+									<div id="wedding-piece">
+										<div>
+										<img src="img/CenterHeart.png" id="center-heart"class="img-responsive" alt="Center Piece">
+										<img src="img/CenterFlower.png" id="center-flower"class="img-responsive" alt="Center Piece">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">  
+								<h1 id="bride">Joanna</h1>
+								</div>
+							</div>
+						</div>
+						<h3 id="wMsg">ARE GETTING MARRIED</h3>
+					</div>
+				</div>
+				<div id="nav-content">
+					<a  href="#" class="primary-bg"><span class="glyphicon glyphicon-chevron-down"></span></a>
+				</div>
 			</section>
 			
 			<section id="intro"  class="container-fluid section-content"
-				data-top="opacity: 0" data-center="opacity: 1" 
+				data-top-bottom="opacity: 0" data-center="opacity: 1" 
 			>
+				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-200px; left:-200px"
+					data-bottom="transform: scale(0.20) rotate(0deg);"
+					data-top="transform: scale(0.5) rotate(20deg);"
+				>
+				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-100px; left:-50px"
+					data-15p-bottom="transform: scale(0.15) rotate(10deg);"
+					data-top="transform: scale(0.3) rotate(-30deg);"
+				>
+				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-120px; right:100px"
+					data-5p-bottom="transform: scale(0.18) rotate(20deg);"
+					data-top="transform: scale(0.4) rotate(10deg);"
+				>
+				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-100px; right:-120px"
+					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
+					data-top="transform: scale(0.55) rotate(18deg);"
+				>
+				
 				<h1 class="text-center">Our Story</h1>	
 				<h2 class="text-center">in our own words</h2>
 				<div class="container">
@@ -73,7 +138,25 @@
 			
 			</section>
 			
-			<section id="story1" class="container-fluid section-content">
+			<section id="story1" class="container-fluid section-content"
+				data-top-bottom="opacity: 0" data-center="opacity: 1" 
+			>
+				<!--<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-55%; left:-10%"
+					data-bottom="transform: scale(0.20) rotate(0deg);"
+					data-top="transform: scale(0.5) rotate(20deg);"
+				>
+				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-60%; left:15%"
+					data-15p-bottom="transform: scale(0.15) rotate(10deg);"
+					data-top="transform: scale(0.3) rotate(-30deg);"
+				>
+				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-60%; right:-15%"
+					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
+					data-top="transform: scale(0.4) rotate(18deg);"
+				>
+				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-55%; right:5%"
+					data-5p-bottom="transform: scale(0.2) rotate(20deg);"
+					data-top="transform: scale(0.6) rotate(10deg);"
+				>-->
 				<h2 class="text-center">How We Met</h2>
 				<div class="container">
 					<div class="row">
@@ -90,7 +173,9 @@
 					</div>
 				</div>				
 			</section>
-			<section id="story2" class="container-fluid section-content">
+			<section id="story2" class="container-fluid section-content"
+				data-top-bottom="opacity: 0" data-center="opacity: 1" 
+			>
 				<h2 class="text-center">How We Grew Up Together</h2>
 				<div class="container">
 					<div class="row">
@@ -107,7 +192,9 @@
 					</div>
 				</div>			
 			</section>
-			<section id="story3" class="container-fluid section-content">
+			<section id="story3" class="container-fluid section-content"
+				data-top-bottom="opacity: 0" data-center="opacity: 1" 
+			>
 				<h2 class="text-center">How We Fell In Love</h2>
 				<div class="container">
 					<div class="row">
@@ -124,7 +211,9 @@
 					</div>
 				</div>				
 			</section>
-			<section id="story4" class="container-fluid section-content">
+			<section id="story4" class="container-fluid section-content"
+				data-top-bottom="opacity: 0" data-center="opacity: 1" 
+			>
 				<h2 class="text-center">How We Got Engaged</h2>
 				<div class="container">
 					<div class="row">
@@ -141,7 +230,7 @@
 					</div>
 				</div>				
 			</section>
-			<section class="container-fluid final-section-content">
+			<!--<section class="container-fluid final-section-content">
 				<h1 class="text-center">How We Are Celebrating Our Love</h1>
 				<h2 class="text-center">With You and the People We Love</h2>
 				<div class="container">
@@ -151,13 +240,13 @@
 					</p>
 						
 				</div>				
-			</section>
+			</section>-->
 		</section>
 	</main>
 	<!--<footer data-end="background-color: rgb(233, 163, 145)" data-65-end="background-color: rgb(212,208,181)">-->
-	<footer data-bottom="background-color: rgb(233, 163, 145)" data-25-bottom="background-color: rgb(212,208,181)">
+	<footer data-bottom="background-color: rgb(124, 156, 102); border-top: 2px solid #6a8953;" data-25-bottom="background-color: rgb(233, 163, 145); border-top: 2px solid #e9a391;">
         <div class="wrapper clearfix">
-            <p>&copy; 2014 footerText</p>
+            <p>&copy; 2015 Alfredo <span class="glyphicon glyphicon-heart-empty"></span> Joanna</p>
         </div>
     </footer>
 
