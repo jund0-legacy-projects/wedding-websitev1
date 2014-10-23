@@ -29,22 +29,11 @@
         <![endif]-->
     <!--<div id="offset"> 10 </div>  --> 
 	<header class="header-container">
-		<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
-			data-anchor-target="#main-landing"
-            data-top-bottom="background-color:rgb(255,255,255);"
-         	data-top="background-color:rgb(0,0,0);"
-		>-->
-		<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
-			data-anchor-target="#main-landing"
-            data-top="opacity: 0"
-            data-top-bottom="opacity: 1"
-         	
-		>-->
 		<nav class="navbar navbar-default navbar-fixed-top nav-wrapper" role="navigation">
 		  <div class="container-fluid">
-		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+		      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-nav">-->
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target=".sidebar-nav">
 		        <span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
@@ -52,22 +41,43 @@
 		      </button>
 		      <a class="navbar-brand" href="#">Alfredo <span class="glyphicon glyphicon-heart-empty"></span> Joanna</a>
 		    </div>
-
+			<div class="visible-xs" style="">
+				<div class="collapse navbar-collapse" id="mobile-nav">		      
+			    	<div  class="text-center">
+				      	<div class="wedding-piece">
+							<div>
+								<img src="img/CenterFlower.png" class="img-responsive animate-flower" alt="Center Piece">
+							</div>
+						</div>	
+			      	</div>
+			      	<div>
+				      <ul class="nav navbar-nav ">
+				        <li class="active"><a href="#">Our Story</a></li>
+				        <li><a href="#">Our Wedding Party</a></li>
+				        <li><a href="#">Our Gallery</a></li>
+				        <li><a href="location.html">Where are We celebrating?</a></li>
+				        <li><a href="#">Contact Us</a></li>
+				      </ul>
+			      	</div>
+		      	</div>
+		    </div>
 		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="main-nav">
+		    <div class="hidden-xs" id="main-nav">
 		      <div class="menu-container" style="">
 			      <div id="menu-icon" >
 			      	<img src="img/succulent-nav.png" class="img-responsive">
 			      </div>
 			      <div class="menu-header" >
 				      <ul class="nav navbar-nav ">
-				        <li class="active"><a href="#">Our Wedding Party</a></li>
-				        <li><span>|</span></li>
-				        <li class=""><a href="#">Our Gallery</a></li>
-				        <li><span>|</span></li>
-				        <li class=""><a href="location.html">Where are We celebrating?</a></li>
-				        <li><span>|</span></li>
-				        <li><a href="#">Contact Us</a></li>
+				        <li class="active"><a href="#">Our Story</a></li>
+				        <li ><span>|</span></li>
+				        <li><a href="#">Our Wedding Party</a></li>
+				        <li ><span>|</span></li>
+				        <li ><a href="#">Our Gallery</a></li>
+				        <li ><span>|</span></li>
+				        <li ><a href="location.html">Where are We celebrating?</a></li>
+				        <li ><span>|</span></li>
+				        <li><a href="#">Contact Us</a></li>   
 				      </ul>
 			      </div>
 		      </div>
@@ -76,12 +86,27 @@
 		</nav>		
 	</header>
 	<main>
+		<div class="container-fluid no-pad-mar">
+		<div class="row row-offcanvas row-offcanvas-left">
+		<!--sidebar-->
+		<div class="col-xs-6 col-sm-3 sidebar-offcanvas visible-xs" id="sidebar" role="navigation">
+            <div style="position:relative;" id="mobile-nav">
+            <ul class="nav">
+	            <li class="active"><a href="#">Our Story</a></li>
+		        <li><a href="#">Our Wedding Party</a></li>
+		        <li><a href="#">Our Gallery</a></li>
+		        <li><a href="location.html">Where are We celebrating?</a></li>
+		        <li><a href="#">Contact Us</a></li>              
+            </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 " id="main-section">
 		<section id="content">
 			<section id="main-landing">
 				<div id="home-landscape" class="block">
-					<div class="centered">
+					<div class="centered hidden-xs">
 						<h2 id="wDate">April 25 2015</h2>
-						<div class="center-piece container">
+						<div class="center-piece container" >
 							<div class="row">
 								<div class="col-md-4">
 								<h1 id="groom">Alfredo</h1>
@@ -89,8 +114,8 @@
 								<div class="col-md-4">
 									<div id="wedding-piece">
 										<div>
-										<img src="img/CenterHeart.png" id="center-heart"class="img-responsive" alt="Center Piece">
-										<img src="img/CenterFlower.png" id="center-flower"class="img-responsive" alt="Center Piece">
+										<img src="img/CenterHeart.png" id="center-heart" class="img-responsive" alt="Center Piece">
+										<img src="img/CenterFlower.png" id="center-flower" class="img-responsive" alt="Center Piece">
 										</div>
 									</div>
 								</div>
@@ -110,26 +135,26 @@
 			<section id="intro"  class="container-fluid section-content"
 				data-top-bottom="opacity: 0" data-center="opacity: 1" 
 			>
-				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-200px; left:-200px"
+				<!--<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-200px; left:-200px"
 					data-bottom="transform: scale(0.20) rotate(0deg);"
 					data-top="transform: scale(0.5) rotate(20deg);"
 				>
-				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-100px; left:-50px"
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; left:-50px"
 					data-15p-bottom="transform: scale(0.15) rotate(10deg);"
 					data-top="transform: scale(0.3) rotate(-30deg);"
 				>
-				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-120px; right:100px"
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-120px; right:100px"
 					data-5p-bottom="transform: scale(0.18) rotate(20deg);"
 					data-top="transform: scale(0.4) rotate(10deg);"
 				>
-				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-100px; right:-120px"
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; right:-120px"
 					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
 					data-top="transform: scale(0.55) rotate(18deg);"
-				>
+				>-->
 				
 				<h1 class="text-center">Our Story</h1>	
 				<h2 class="text-center">in our own words</h2>
-				<div class="container">
+				<div class="container-fluid">
 				<p class="text-center">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non aliquam justo, vitae dignissim nisi. Vestibulum a arcu vitae tellus tempor dignissim vulputate vel magna. Nulla venenatis nec odio a porttitor. Mauris eu diam vel nunc interdum efficitur. Sed eu massa et odio bibendum varius. Integer ut dictum justo. Aliquam at mollis lectus. Quisque mi tortor, feugiat nec molestie sagittis.
 				</p>
@@ -141,24 +166,24 @@
 			<section id="story1" class="container-fluid section-content"
 				data-top-bottom="opacity: 0" data-center="opacity: 1" 
 			>
-				<!--<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-55%; left:-10%"
+				<!--<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-200px; left:-200px"
 					data-bottom="transform: scale(0.20) rotate(0deg);"
 					data-top="transform: scale(0.5) rotate(20deg);"
 				>
-				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-60%; left:15%"
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; left:-50px"
 					data-15p-bottom="transform: scale(0.15) rotate(10deg);"
 					data-top="transform: scale(0.3) rotate(-30deg);"
 				>
-				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-60%; right:-15%"
-					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
-					data-top="transform: scale(0.4) rotate(18deg);"
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-120px; right:100px"
+					data-5p-bottom="transform: scale(0.18) rotate(20deg);"
+					data-top="transform: scale(0.4) rotate(10deg);"
 				>
-				<img class="succulent" src="img/succulent-sample.png" alt="succlent" style="top:-55%; right:5%"
-					data-5p-bottom="transform: scale(0.2) rotate(20deg);"
-					data-top="transform: scale(0.6) rotate(10deg);"
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; right:-120px"
+					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
+					data-top="transform: scale(0.55) rotate(18deg);"
 				>-->
 				<h2 class="text-center">How We Met</h2>
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-6">
 							<p class="text-center">
@@ -176,8 +201,24 @@
 			<section id="story2" class="container-fluid section-content"
 				data-top-bottom="opacity: 0" data-center="opacity: 1" 
 			>
+				<!--<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-200px; left:-200px"
+					data-bottom="transform: scale(0.20) rotate(0deg);"
+					data-top="transform: scale(0.5) rotate(20deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; left:-50px"
+					data-15p-bottom="transform: scale(0.15) rotate(10deg);"
+					data-top="transform: scale(0.3) rotate(-30deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-120px; right:100px"
+					data-5p-bottom="transform: scale(0.18) rotate(20deg);"
+					data-top="transform: scale(0.4) rotate(10deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; right:-120px"
+					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
+					data-top="transform: scale(0.55) rotate(18deg);"
+				>-->
 				<h2 class="text-center">How We Grew Up Together</h2>
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-6">
 							<p class="text-center">
@@ -195,8 +236,24 @@
 			<section id="story3" class="container-fluid section-content"
 				data-top-bottom="opacity: 0" data-center="opacity: 1" 
 			>
+				<!--<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-200px; left:-200px"
+					data-bottom="transform: scale(0.20) rotate(0deg);"
+					data-top="transform: scale(0.5) rotate(20deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; left:-50px"
+					data-15p-bottom="transform: scale(0.15) rotate(10deg);"
+					data-top="transform: scale(0.3) rotate(-30deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-120px; right:100px"
+					data-5p-bottom="transform: scale(0.18) rotate(20deg);"
+					data-top="transform: scale(0.4) rotate(10deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; right:-120px"
+					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
+					data-top="transform: scale(0.55) rotate(18deg);"
+				>-->
 				<h2 class="text-center">How We Fell In Love</h2>
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-6">
 							<p class="text-center">
@@ -214,8 +271,24 @@
 			<section id="story4" class="container-fluid section-content"
 				data-top-bottom="opacity: 0" data-center="opacity: 1" 
 			>
+				<!--<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-200px; left:-200px"
+					data-bottom="transform: scale(0.20) rotate(0deg);"
+					data-top="transform: scale(0.5) rotate(20deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; left:-50px"
+					data-15p-bottom="transform: scale(0.15) rotate(10deg);"
+					data-top="transform: scale(0.3) rotate(-30deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-120px; right:100px"
+					data-5p-bottom="transform: scale(0.18) rotate(20deg);"
+					data-top="transform: scale(0.4) rotate(10deg);"
+				>
+				<img class="succulent hidden-xs" src="img/succulent-sample.png" alt="succlent" style="top:-100px; right:-120px"
+					data-50p-bottom="transform: scale(0.3) rotate(0deg);"
+					data-top="transform: scale(0.55) rotate(18deg);"
+				>-->
 				<h2 class="text-center">How We Got Engaged</h2>
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-6">
 							<p class="text-center">
@@ -230,20 +303,11 @@
 					</div>
 				</div>				
 			</section>
-			<!--<section class="container-fluid final-section-content">
-				<h1 class="text-center">How We Are Celebrating Our Love</h1>
-				<h2 class="text-center">With You and the People We Love</h2>
-				<div class="container">
-					
-					<p class="text-center">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-					</p>
-						
-				</div>				
-			</section>-->
 		</section>
+		</div>
+		</div>
+		</div>
 	</main>
-	<!--<footer data-end="background-color: rgb(233, 163, 145)" data-65-end="background-color: rgb(212,208,181)">-->
 	<footer data-bottom="background-color: rgb(124, 156, 102); border-top: 2px solid #6a8953;" data-25-bottom="background-color: rgb(233, 163, 145); border-top: 2px solid #e9a391;">
         <div class="wrapper clearfix">
             <p>&copy; 2015 Alfredo <span class="glyphicon glyphicon-heart-empty"></span> Joanna</p>
