@@ -178,6 +178,7 @@ footer{
 .final-section-content{
     padding: 10% 0;
 }
+.content-wrapper{ overflow:hidden; } 
 #main-section{
     padding:0;
 }
