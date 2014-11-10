@@ -500,7 +500,6 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: all .4s ease-in-out;
 }
 footer {
-    background-color: #ffffff;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -596,14 +595,93 @@ background-color:transparent;
     100% { -webkit-transform: scale(0.5) rotate(360deg) } 
 }
 /* collapsed sidebar styles */
+
+
+/* Gallery */
+.profile-section{
+    padding:5% 0;
+}
+.profile-image{
+    height:150px;
+    width:150px;
+    background-size:cover;
+    border-radius:150px;
+    display:inline-block;
+    border: solid 2px rgb(106, 137, 83);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 4px;;
+}
+.bm-1{
+    background-image: url(../img/wedding_party/b/k_t.jpg);
+}
+.bm-2{
+    background-image: url(../img/wedding_party/b/v_t.jpg);
+}
+.bm-3{
+    background-image: url(../img/wedding_party/b/a_h.jpg);
+}
+.bm-4{
+    background-image: url(../img/wedding_party/b/k_s.jpg);
+}
+
+.gm-1{
+    background-image: url(../img/wedding_party/g/c_e.jpg);
+}
+.gm-2{
+    background-image: url(../img/wedding_party/g/m_p.jpg);
+}
+.gm-3{
+    background-image: url(../img/wedding_party/g/r_j.jpg);
+}
+.gm-4{
+    background-image: url(../img/wedding_party/g/j_n.jpg);
+}
+
+#wedding-party{}
+    #wedding-party .tab-content>.tab-pane, #wedding-party .tab-content>.active{
+        -webkit-transition: display 1s ease-in-out;
+        -moz-transition: display 1s ease-in-out;
+        -ms-transition: display 1s ease-in-out;
+        -o-transtion: display 1s ease-in-out;
+        transition: display 1s ease-in-out;
+    }
+    #wedding-party .nav-tabs{ border-bottom: 2px solid rgb(106, 137, 83);  } 
+
+    #wedding-party .nav-tabs>li.active>a, 
+    #wedding-party .nav-tabs>li.active>a:hover, 
+    #wedding-party.nav-tabs>li.active>a:focus{
+        color:#fff;
+        background-color: rgb(124, 156, 102);
+        border: 1px solid rgb(106, 137, 83);
+    }
+
+    #wedding-party .nav>li>a:hover, .nav>li>a:focus{
+        background-color: rgba(124, 156, 102,0.75);
+        border: 1px solid rgb(106, 137, 83);
+    }
+
+    #wedding-party .nav-tabs>li{
+        width:50%;
+        text-align:center;
+    }
+    #wedding-party .nav-tabs>li a{
+        font-size:2em;
+        font-family: ostrich_sans_rounded;
+        color: #333;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transtion: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
 @media screen and (max-width: 767px) {
   .row-offcanvas {
     position: relative;
-    -webkit-transition: left .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
     -o-transtion: all .4s ease-in-out;
-    transition: left 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
   .row-offcanvas-right
   .sidebar-offcanvas {

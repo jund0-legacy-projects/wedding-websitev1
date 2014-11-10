@@ -2,313 +2,60 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Fredo Loves Joanna Version1</title>
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="css/main.css" >
-	<!--[if gte IE 9]>
-	  <style type="text/css">
-	    .gradient {
-	       filter: none;
-	    }
-	  </style>
-	<![endif]-->
-	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsUBFe4LlkVQ3LCk6yNJ9bbMk3f5XF3To&sensor=false&libraries=places"> </script>
-</head>
-<body > 
-
-	<!--[if lt IE 7]>
+<!--[if gt IE 8]><!--> <html class="no-js" > <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fredo Loves Joanna Version2</title>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="css/main.css" >
+		<!--[if gte IE 9]>
+		  <style type="text/css">
+		    .gradient {
+		       filter: none;
+		    }
+		  </style>
+		<![endif]-->
+		<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsUBFe4LlkVQ3LCk6yNJ9bbMk3f5XF3To&sensor=false&libraries=places"> </script>
+	</head>
+	<body ng-app="fljApp" >
+		<!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <!--<div id="offset"> 10 </div>  --> 
-	<header class="header-container">
-		<nav class="navbar navbar-default navbar-fixed-top nav-wrapper" role="navigation">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-nav">-->
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target=".sidebar-nav">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">Alfredo <span class="glyphicon glyphicon-heart-empty"></span> Joanna</a>
-		    </div>
-			<div class="visible-xs" style="">
-				<div class="collapse navbar-collapse" id="mobile-nav">		      
-			    	<div  class="text-center">
-				      	<div class="wedding-piece">
-							<div>
-								<img src="img/CenterFlower.png" class="img-responsive animate-flower" alt="Center Piece">
-							</div>
-						</div>	
-			      	</div>
-			      	<div>
-				      <ul class="nav navbar-nav ">
-				        <li class="active"><a href="#">Our Story</a></li>
-				        <li><a href="#">Our Wedding Party</a></li>
-				        <li><a href="#">Our Gallery</a></li>
-				        <li><a href="location.html">Where are We celebrating?</a></li>
-				        <li><a href="#">Contact Us</a></li>
-				      </ul>
-			      	</div>
-		      	</div>
-		    </div>
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="hidden-xs" id="main-nav">
-		      <div class="menu-container" style="">
-			      <div id="menu-icon" >
-			      	<img src="img/succulent-nav.png" class="img-responsive">
-			      </div>
-			      <div class="menu-header" >
-				      <ul class="nav navbar-nav ">
-				        <li class="active"><a href="#">Our Story</a></li>
-				        <li class="hidden"><span>|</span></li>
-				        <li class="hidden"><a href="#">Our Wedding Party</a></li>
-				        <li class="hidden"><span>|</span></li>
-				        <li class="hidden"><a href="#">Our Gallery</a></li>
-				        <li ><span>|</span></li>
-				        <li ><a href="location.html">Where are We celebrating?</a></li>
-				        <li ><span>|</span></li>
-				        <li><a href="#">Contact Us</a></li>   
-				      </ul>
-			      </div>
-		      </div>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>		
-	</header>
-	<main>
-		<div class="container-fluid no-pad-mar content-wrapper">
-		<div class="row row-offcanvas row-offcanvas-left">
-		<!--sidebar-->
-		<div class="col-xs-6 col-sm-3 sidebar-offcanvas visible-xs" id="sidebar" role="navigation">
-            <div style="position:relative;" id="mobile-nav">
-	            <ul class="nav">
-		            <li class="active"><a href="#">Our Story</a></li>
-			        <li><a href="#">Our Wedding Party</a></li>
-			        <li><a href="#">Our Gallery</a></li>
-			        <li><a href="location.html">Where are We celebrating?</a></li>
-			        <li><a href="#">Contact Us</a></li>              
-	            </ul>
-            </div>
-        </div>
-        <div class="col-xs-12 " id="main-section">
-			<section id="content">
-				<section id="main-landing">
-					<div id="home-landscape" class="block">
-						<div class="centered hidden-xs">
-							
-							<div class="center-piece container" >
-								<div class="row">
-									<div class="col-md-4">
-									<h1 id="groom">Alfredo</h1>
-									</div>
-									<div class="col-md-4">
-										<div id="wedding-piece">
-											<div>
-											<img src="img/CenterHeart.png" id="center-heart" class="img-responsive" alt="Center Piece">
-											<img src="img/CenterFlower.png" id="center-flower" class="img-responsive" alt="Center Piece">
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">  
-									<h1 id="bride">Joanna</h1>
-									</div>
-								</div>
-							</div>
-							<h2 id="wDate">April 25 2015</h2>
-							<h3 id="wMsg">ARE GETTING MARRIED</h3>
-						</div>
+        <div ng-controller ="MainCtrl">
+			<div ng-include ='"templates/layout/header.html"'></div>
+			<main>
+				<div class="container-fluid no-pad-mar content-wrapper">
+					<div class="row row-offcanvas row-offcanvas-left">
+						<!-- mobile sidebar -->
+						<div ng-include = '"templates/layout/navigation/sidebar.html"'></div>
+						<!-- mobile sidebar -->
+						<div ng-include = '"templates/layout/body.html"'></div>	
 					</div>
-					<div id="nav-content">
-						<a  href="#" class="primary-bg"><span class="glyphicon glyphicon-chevron-down"></span></a>
-					</div>
-				</section>
-				
-				<section id="intro"  class="container-fluid section-content"
-					data-top-bottom="opacity: 0" data-center="opacity: 1" 
-				>
-			
-					
-					<h1 class="text-center">Our Story</h1>	
-					<h2 class="text-center">in our own words</h2>
-					<div class="container-fluid">
-					<p class="text-center">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non aliquam justo, vitae dignissim nisi. Vestibulum a arcu vitae tellus tempor dignissim vulputate vel magna. Nulla venenatis nec odio a porttitor. Mauris eu diam vel nunc interdum efficitur. Sed eu massa et odio bibendum varius. Integer ut dictum justo. Aliquam at mollis lectus. Quisque mi tortor, feugiat nec molestie sagittis.
-					</p>
-
-					</div>
-				
-				</section>
-
-				<section id="story1" class="container-fluid section-content"
-					data-top-bottom="opacity: 0" data-center="opacity: 1" 
-				>
-					
-					<div class="text-center" >
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-5.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-80p-bottom= "opacity: 0;"
-						data-top="transform: scale(0.82) rotate(18deg); opacity: 1;"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-3.png" alt="succlent" 
-						data-50p-bottom="transform: scale(0.3) rotate(0deg);"
-						data-top="transform: scale(0.8) rotate(18deg);"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-2.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-10p-bottom= "opacity: 1;"
-						data-top="transform: scale(0.8) rotate(18deg); opacity: 0;"	
-						>	
-					</div>
-					<h2 class="text-center">How We Met</h2>
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-						</div>
-					</div>				
-				</section>
-				<section id="story2" class="container-fluid section-content"
-					data-top-bottom="opacity: 0" data-center="opacity: 1" 
-				>
-					<div class="text-center" >
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-5.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-80p-bottom= "opacity: 0;"
-						data-top="transform: scale(0.82) rotate(18deg); opacity: 1;"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-3.png" alt="succlent" 
-						data-50p-bottom="transform: scale(0.3) rotate(0deg);"
-						data-top="transform: scale(0.8) rotate(18deg);"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-2.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-10p-bottom= "opacity: 1;"
-						data-top="transform: scale(0.8) rotate(18deg); opacity: 0;"	
-						>	
-					</div>
-					<h2 class="text-center">How We Grew Up Together</h2>
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-						</div>
-					</div>			
-				</section>
-				<section id="story3" class="container-fluid section-content"
-					data-top-bottom="opacity: 0" data-center="opacity: 1" 
-				>
-					<div class="text-center" >
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-5.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-80p-bottom= "opacity: 0;"
-						data-top="transform: scale(0.82) rotate(18deg); opacity: 1;"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-3.png" alt="succlent" 
-						data-50p-bottom="transform: scale(0.3) rotate(0deg);"
-						data-top="transform: scale(0.8) rotate(18deg);"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-2.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-10p-bottom= "opacity: 1;"
-						data-top="transform: scale(0.8) rotate(18deg); opacity: 0;"	
-						>	
-					</div>
-					<h2 class="text-center">How We Fell In Love</h2>
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-						</div>
-					</div>				
-				</section>
-				<section id="story4" class="container-fluid section-content"
-					data-top-bottom="opacity: 0" data-center="opacity: 1" 
-				>
-					<div class="text-center" >
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-5.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-80p-bottom= "opacity: 0;"
-						data-top="transform: scale(0.82) rotate(18deg); opacity: 1;"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-3.png" alt="succlent" 
-						data-50p-bottom="transform: scale(0.3) rotate(0deg);"
-						data-top="transform: scale(0.8) rotate(18deg);"	
-						>
-						<img class="hidden-xs succulent-section" src="img/succulents/s1-2.png" alt="succlent" 
-						data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-						data-10p-bottom= "opacity: 1;"
-						data-top="transform: scale(0.8) rotate(18deg); opacity: 0;"	
-						>	
-					</div>
-					<h2 class="text-center">How We Got Engaged</h2>
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<p class="text-center">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, sem sodales faucibus fringilla, elit ligula pharetra nunc, pellentesque ultricies ante arcu vel eros. Morbi tortor enim, molestie in laoreet.
-								</p>
-							</div>
-						</div>
-					</div>				
-				</section>
-			</section>
+				</div>
+			</main>
+			<div ng-include ='"templates/layout/footer.html"'></div>
+			<div id="content-overlay" ><img src="img/succulents/s1-2.png" class="spinning" alt="LOADING..."></div>
 		</div>
-		</div>
-		</div>
-	</main>
-	<footer data-bottom="background-color: rgb(124, 156, 102); border-top: 2px solid #6a8953;" data-25-bottom="background-color: rgb(233, 163, 145); border-top: 2px solid #e9a391;">
-        <div class="wrapper clearfix">
-            <p>&copy; 2015 Alfredo <span class="glyphicon glyphicon-heart-empty"></span> Joanna</p>
-        </div>
-    </footer>
-	<div id="content-overlay" ><img src="img/succulents/s1-2.png" class="spinning" alt="LOADING..."></div>
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
-	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="libs/skrollr/dist/skrollr.min.js"></script>
-    <script type="text/javascript">
-    
-    </script>
-
-        <script src="js/plugins.js"></script>
-	<script src="js/dist.js"></script>
-</body>
+		
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!--<script type="text/javascript" src="libs/skrollr/dist/skrollr.min.js"></script>-->
+	    <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+	    <script type="text/javascript" src="libs/angular-route/angular-route.min.js"></script>
+	    <script type="text/javascript" src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	    <!--<script type="text/javascript" src="libs/angular-bootstrap/ui-bootstrap.min.js"></script>-->
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+		<script type="text/javascript" src="js/directive.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+	    <!--<script type="text/javascript" src="js/plugins.js"></script>
+		<script src="js/dist.js"></script>-->
+	</body>
 </html>
+
+
+
