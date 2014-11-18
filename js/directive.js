@@ -17,9 +17,14 @@ directives.directive('mainNav', function(){
 			console.log(element.find('a'));
 			var mainNavLinks = element.find('a');
 			mainNavLinks.bind('click', function(){
-				console.log('clicked main nav links');
-				console.log(angular.element('#main-landing'));
+				//console.log('clicked main nav links');
+				//console.log(angular.element('#main-landing'));
 				var mainLanding = angular.element('#main-view');
+				
+				$('#content-overlay').fadeIn(500,function(){
+					
+
+				});
 				$('html, body').animate({
                         scrollTop: mainLanding.offset().top+5
                     }, 1000);
@@ -56,6 +61,21 @@ directives.directive('mainNav', function(){
 		}
 	}
 });
+directives.directive('scrollToContent', function(){
+	return {
+		link: function(scope,element,attributes){
+			if(attributes.ngClick || attributes.href === '' || attributes.href === '#'){
+                elem.on('click', function(e){
+                    //$('html, body').animate({ scrollTop: mainLanding.offset().top+5}, 1000);
+                    console.log('test content');
+                    e.preventDefault();
+
+                });
+            }
+		}
+	}
+});
+
 directives.directive('resize', function ($window) {
 	return function (scope, element) {
 		var w = angular.element($window);
@@ -182,4 +202,31 @@ directives.directive('activeLink',['$location', function(){
 		}
 	};
 
+}]);
+
+
+directives.directive('mySlideController', ['$swipe',
+	function($swipe) {
+		return {
+			restrict: 'EA',
+			link: function(scope, ele, attrs, ctrl) {
+			var startX, pointX;
+			$swipe.bind(ele, {
+				'start': function(coords) {
+				startX = coords.x;
+				pointX = coords.y;
+				},
+				'move': function(coords) {
+				var delta = coords.x - pointX;
+				// ...
+				},
+				'end': function(coords) {
+				// ...
+				},
+				'cancel': function(coords) {
+				// ...
+				}
+			});
+		}
+	}
 }]);

@@ -2,7 +2,8 @@
 
 var app = angular.module('fljApp', ['ngRoute', 'ui.bootstrap', 'alj.controllers', 'alj.directives', 'alj.services']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider, $httpProvider){
+	//$httpProvider.interceptors.push('httpRequestInterceptor');
 	$routeProvider
 		.when('/home', {templateUrl: 'templates/partials/aboutus.html'})
 		.when('/ourparty', {templateUrl: 'templates/partials/weddingparty.html'})

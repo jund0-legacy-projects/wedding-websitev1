@@ -5,7 +5,15 @@ var controllers = angular.module('alj.controllers', []);
 controllers.controller('MainCtrl', function($scope, $window, $location, $route, $log){
 
 
-
+	/*SideMenu*/
+	$scope.showmenu=false;
+	$scope.toggleMenu = function(url){
+		
+		$scope.showmenu=($scope.showmenu) ? false : true;
+		if(typeof url != 'undefined'){
+			console.log(url);	
+		}
+	}
 
 	$scope.isActive = function (viewLocation) {
 	    var active = (viewLocation === $location.path());
@@ -36,21 +44,36 @@ controllers.controller('MainCtrl', function($scope, $window, $location, $route, 
 	
   	$scope.loading = true;
   	
-  	/* //Important design pattern
-  	myService.get().then(function ( response ){
+  	//* //Important design pattern
+  	/*myService.get().then(function ( response ){
   		$scope.loading = false;
   	}, function( response ){
   		$scope.loading = false
-  	} );*/
+  	} );//*/
 	
 	$scope.$on("$locationChangeStart", function(event, next, current) {  
-        $scope.loading = true;
+        //$scope.loading = true;
+        console.log('locationstart');
+        console.log(event);
+        //$('#main-content').fadeOut(1000, function(){
+        	//$('#content-overlay').fadeIn(500);
+        //});
+		//$('#main-content').animate({ opacity: 0 },1000, function(){
+			//$('#content-overlay').fadeIn(100);
+			console.log($scope, $route, $location);
+		//});
       });
 	$scope.$on("$locationChangeSuccess", function(event, next, current) { 
         $log.info("location success"); 
         //$log.info("location changing to:" + next); 
-        $scope.loading = false;
+        //$scope.loading = false;
+        //$('#main-content').fadeIn(1000, function(){
+        	$('#content-overlay').fadeOut(2000);
+        	//console.log($scope, $route, $location);
+       // });
+        
       });
+	
 	/*** Loading */
 	//$scope.$on("")
 });

@@ -240,6 +240,14 @@ footer{
 .navbar-default .navbar-nav>li>span{
     line-height:50px;    
 }
+.navbar-default .navbar-toggle{
+    
+    border: 2px solid rgb(106, 137, 83);
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: rgb(106, 137, 83);
+
+}
 #main-nav .navbar-default .navbar-nav>.active>a,  
 #main-nav .navbar-default .navbar-nav>.active>a:hover, 
 #main-nav .navbar-default .navbar-nav>.active>a:focus{
@@ -403,6 +411,20 @@ footer{
     }
 .map-input{
     position:absolute; top:10%; z-index: 999; text-align:center; width:100%;
+}
+.btn-primary {
+    color: #fff;
+    background-color: rgb(124, 156, 102);
+    border-color: rgb(106, 137, 83);
+}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open>.dropdown-toggle.btn-primary{
+    color: #fff;
+    background-color: rgb(124, 156, 102);
+    border-color: rgb(106, 137, 83);
 }
 #starting-loc{
     background-color: #fff;
@@ -602,13 +624,15 @@ background-color:transparent;
     padding:5% 0;
 }
 .profile-image{
-    height:150px;
-    width:150px;
+    height:250px;
+    width:250px;
     background-size:cover;
-    border-radius:150px;
+    background-position:center;
+    border-radius:250px;
     display:inline-block;
     border: solid 2px rgb(106, 137, 83);
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 4px;;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 4px;
+    
 }
 .bm-1{
     background-image: url(../img/wedding_party/b/k_t.jpg);
@@ -673,6 +697,38 @@ background-color:transparent;
         -o-transtion: all .4s ease-in-out;
         transition: all .4s ease-in-out;
     }
+
+    #menuleft{
+        left:-50%;
+        position:fixed;
+        top:0;
+        width:50%;
+        height:100%;
+        z-index:1000;
+        border-right:2px solid rgb(106, 137, 83);
+        background-color: rgb(124, 156, 102);
+        display:block
+    }
+    #menuleft.slide{left:0}
+    #menuleft h1{background-color:#424242;color:#eee;font-size:1.2em;line-height:50px;text-align:center;float:none !important}
+    #menuleft ul{
+        margin:50px 15px 0 15px;
+        padding:0;
+        list-style: none
+    }
+    #menuleft a{
+        display:block;
+        text-align: center;
+        padding:5%;
+        color:#424242;
+        border-bottom:2px solid rgb(106, 137, 83);
+        text-decoration:none;
+        
+    }
+    #all{display:block;width:100%}
+    #all.hide{position:fixed;left:50%;top:0;width:100%}
+    #all.slide{position:relative;}
+    .slide,.hide{transition: all 0.2s ease;}
 
 @media screen and (max-width: 767px) {
   .row-offcanvas {
