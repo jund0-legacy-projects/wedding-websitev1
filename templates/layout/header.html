@@ -1,0 +1,77 @@
+<header class="header-container">
+	<nav class="navbar navbar-default navbar-fixed-top nav-wrapper" role="navigation" fix-scroll-nav>
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-nav">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target=".sidebar-nav">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>-->
+	      <!-- NEW MOBILE -->
+	      <button ng-click="toggleMenu()" class="navbar-toggle collapsed">
+			<span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Alfredo <span class="glyphicon glyphicon-heart-empty"></span> Joanna</a>
+	    </div>
+		<div class="visible-xs" style="">
+			<div class="collapse navbar-collapse" id="mobile-nav">		      
+		    	<div  class="text-center">
+			      	<div class="wedding-piece">
+						<div>
+							<img src="img/CenterFlower.png" class="img-responsive animate-flower" alt="Center Piece">
+						</div>
+					</div>	
+		      	</div>
+		      	<div>
+			      <ul class="nav navbar-nav ">
+			        <li class="active"><a href="#">Our Story</a></li>
+			        <li><a href="#">Our Wedding Party</a></li>
+			        <li><a href="#">Our Gallery</a></li>
+			        <li><a href="#">Where are We celebrating?</a></li>
+			        <li><a href="#/contact">Contact Us</a></li>
+			      </ul>
+		      	</div>
+	      	</div>
+	    </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="hidden-xs" id="main-nav" >
+	      <div class="menu-container" ng-style="style()" main-nav>
+		      <div id="menu-icon" >
+		      	<img src="img/succulent-nav.png" class="img-responsive">
+		      </div>
+		      <div class="menu-header" >
+			      <ul class="nav navbar-nav ">
+			        <li ng-class=" { active: isActive('/home') }"><a href="#/home">Our Story</a></li>
+			        <li ><span>|</span></li>
+			        <li ng-class=" { active: isActive('/ourparty') }"><a href="#/ourparty">Our Wedding Party</a></li>
+			        <li class="hidden" ><span>|</span></li>
+			        <li class="hidden" ng-class=" { active: isActive('/ourgallery') }"><a href="#">Our Gallery</a></li>
+			        <li ><span>|</span></li>
+			        <li ng-class=" { active: isActive('/locations') }"><a href="#/locations" >Wedding Day Information</a></li>
+			        <li ><span>|</span></li>
+			        <li ng-class=" { active: isActive('/contact') }"><a href="#/contact">Contact Us</a></li>   
+			      </ul>
+		      </div>
+	      </div>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>		
+</header>
+<div id="menuleft" ng-class="{hide:!showmenu,slide:showmenu}" class="visible-xs">
+			<!--<h1>Demo</h1>
+			<div class="text-center">
+				<img src="img/succulent-nav.png" class="img-responsive">
+			</div>-->
+			<ul>
+				<li ng-class=" { active: isActive('/home') }"><a href="#/home" ng-click="toggleMenu('#/home')">Our Story</a></li>
+				<li ng-class=" { active: isActive('/ourparty') }"><a href="#/ourparty" ng-click="toggleMenu()">Our Wedding Party</a></li>
+				<li class="hidden" ng-class=" { active: isActive('/ourgallery') }"><a href="#" ng-click="toggleMenu()">Our Gallery</a></li>
+				 <li ng-class=" { active: isActive('/locations') }"><a href="#/locations" ng-click="toggleMenu()">Wedding Day Information</a></li>
+				 <li ng-class=" { active: isActive('/contact') }"><a href="#/contact" ng-click="toggleMenu()">Contact Us</a></li>
+			</ul>
+		</div>
