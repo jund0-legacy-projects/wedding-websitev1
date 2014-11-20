@@ -26,6 +26,7 @@
 		<!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="skrollr-body">
         <div ng-controller ="MainCtrl">
 			<div ng-include ='"templates/layout/header.html"'></div>
 			<main>
@@ -41,7 +42,7 @@
 			<div ng-include ='"templates/layout/footer.html"'></div>
 			<div id="content-overlay" ng-show="loading"><img src="img/succulents/s1-2.png" class="spinning" alt="LOADING..."></div>
 		</div>
-		
+		</div>
 		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 		<!--<script type="text/javascript" src="libs/skrollr/dist/skrollr.min.js"></script>-->
 	    <script type="text/javascript" src="libs/angular/angular.min.js"></script>
