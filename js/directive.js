@@ -65,11 +65,11 @@ directives.directive('scrollToContent', function(){
 	return {
 		link: function(scope,element,attributes){
 			if(attributes.ngClick || attributes.href === '' || attributes.href === '#'){
-                elem.on('click', function(e){
-                    //$('html, body').animate({ scrollTop: mainLanding.offset().top+5}, 1000);
+                element.bind('click', function(e){
+                    var mainLanding = angular.element('#main-view');
                     console.log('test content');
                     e.preventDefault();
-
+                    $('html, body').animate({ scrollTop: mainLanding.offset().top+5}, 1000);
                 });
             }
 		}
