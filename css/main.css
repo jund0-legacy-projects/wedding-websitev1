@@ -152,16 +152,24 @@ footer{
     */
 }
 
+.succulent-flower{
+    height:150px;
+}
+
 .header-container{
     position:relative;
 }
 
 .section-content{
-    padding:10% 0;
-    /*border-bottom: 1px solid #d4d1b5;*/
-    margin: 0 5%;
+    padding: 5% 0 0;
+    margin: 5%;
     position:relative;
 }
+    .section-content p{
+        line-height: 2em;
+        letter-spacing: 3px;
+    }
+
     .section-content .succulent{
         position:absolute;
     }
@@ -172,7 +180,7 @@ footer{
           position:absolute;
           left:0;
           right:0;
-          top:-20%;
+          top:0;
           margin:auto;
           opacity:1;
     }
@@ -530,6 +538,8 @@ footer {
         font-weight:bold;
         color: #fff;
         text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+        line-height: 2em;
+        letter-spacing: 3px;
 
     }
 .no-pad-mar{
