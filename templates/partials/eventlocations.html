@@ -10,12 +10,12 @@
 			
 	</div>				
 </section>
-<section id="story2" class="container-fluid section-content"
+<section class="container-fluid section-content"
 	skrollr-tag
 	data-top-bottom="opacity: 0" 
 	data-center="opacity: 1" 
 >
-	<div class="text-center" >
+	<div class="text-center succulent-flower" >
 		<img class="hidden-xs succulent-section" src="img/succulents/s1-5.png" alt="succlent" 
 		data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
 		data-80p-bottom= "opacity: 0;"
@@ -59,56 +59,4 @@
 			</div>
 		</div>
 	</div>			
-</section>
-<section class="container-fluid section-content hidden" >
-	<div class="text-center" >
-		<img class="hidden-xs succulent-section" src="img/succulents/s1-5.png" alt="succlent" 
-		data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-		data-80p-bottom= "opacity: 0;"
-		data-top="transform: scale(0.82) rotate(18deg); opacity: 1;"	
-		>
-		<img class="hidden-xs succulent-section" src="img/succulents/s1-3.png" alt="succlent" 
-		data-50p-bottom="transform: scale(0.3) rotate(0deg);"
-		data-top="transform: scale(0.8) rotate(18deg);"	
-		>
-		<img class="hidden-xs succulent-section" src="img/succulents/s1-2.png" alt="succlent" 
-		data-50p-bottom= "transform: scale(0.3) rotate(0deg);"
-		data-10p-bottom= "opacity: 1;"
-		data-top="transform: scale(0.8) rotate(18deg); opacity: 0;"	
-		>	
-	</div>
-	<h2 class="text-center">Need Help finding the Locations?</h2>
-	<div class="map-wrapper" style="position:relative;">
-		<div class="map-input" >
-			
-			<input id="starting-loc" class="controls" type="text" placeholder="Enter a Location" autocomplete="off"  />
-		</div>
-		<ul class="map-nav">
-			
-			<li class="circle-link"><a href="#"  data-loc="1">CHURCH</a></li>
-			<li class="circle-link"><a href="#"  data-loc="2">RECEPTION</a></li>
-		</ul>
-		<ul class="map-controls">
-			
-			<li><a href="#" class="" data-toggle="modal" data-target="#myModal">Need Directions</a></li>
-			<li><div class="directions-travel-mode-icon directions-drive-icon"></div></li>
-		</ul>
-
-		<div id="map" style="position:relative; z-index:10;"></div>
-		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-		    	<div class="modal-content">
-			    	<div class="modal-header">
-			        	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			        	<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-			      	</div>
-			      	<div class="modal-body">
-						<div id="directions-panel"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="map-overlay" style="position:absolute; top:0; left: 0; right:0; bottom:0; background: rgba(0,0,0,0.5); z-index: 11; "></div>
-	</div>
 </section>
