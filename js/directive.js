@@ -14,7 +14,7 @@ directives.directive('mainNav', function(){
 	return {
 		link: function(scope,element, attributes){
 
-			console.log(element.find('a'));
+			//console.log(element.find('a'));
 			var mainNavLinks = element.find('a');
 			mainNavLinks.bind('click', function(){
 				//console.log('clicked main nav links');
@@ -39,7 +39,7 @@ directives.directive('mainNav', function(){
 						'border-radius' : '25px'
 	                };
 				};
-				console.log(element.find('#menu-icon'));
+				//console.log(element.find('#menu-icon'));
 				element.find('#menu-icon').css({ 'height' : 50, 'width' : 50});
 				scope.$apply(); 
 			});
@@ -56,8 +56,6 @@ directives.directive('mainNav', function(){
 				//console.log(element.firstChild);
 				//console.log('mouseenter main leave');
 			});
-			
-
 		}
 	}
 });
@@ -230,3 +228,16 @@ directives.directive('mySlideController', ['$swipe',
 		}
 	}
 }]);
+
+
+directives.directive("loader", function ($rootScope) {
+    return function ($scope, element, attrs) {
+        $scope.$on("loader_show", function () {
+            return element.show();
+        });
+        return $scope.$on("loader_hide", function () {
+            return element.hide();
+        });
+    };
+}
+)
