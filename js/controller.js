@@ -42,7 +42,7 @@ controllers.controller('MainCtrl', function($scope, $window, $location, $route, 
 	});
   	});
 	
-  	$scope.loading = true;
+  	//$scope.loading = true;
   	
   	//* //Important design pattern
   	/*myService.get().then(function ( response ){
@@ -54,23 +54,22 @@ controllers.controller('MainCtrl', function($scope, $window, $location, $route, 
 	$scope.$on("$locationChangeStart", function(event, next, current) {  
         //$scope.loading = true;
         console.log('locationstart');
-        console.log(event);
-        //$('#main-content').fadeOut(1000, function(){
-        	//$('#content-overlay').fadeIn(500);
-        //});
+        //console.log(event);
+        console.log(next);
+        console.log(current);
+
+        //$('#main-view').fadeOut(4000);
+	//$('#content-overlay').fadeOut(2000);
 		//$('#main-content').animate({ opacity: 0 },1000, function(){
 			//$('#content-overlay').fadeIn(100);
-			console.log($scope, $route, $location);
+			//console.log($scope, $route, $location);
 		//});
       });
 	$scope.$on("$locationChangeSuccess", function(event, next, current) { 
         $log.info("location success"); 
         //$log.info("location changing to:" + next); 
         //$scope.loading = false;
-        //$('#main-content').fadeIn(1000, function(){
-        	$('#content-overlay').fadeOut(2000);
-        	//console.log($scope, $route, $location);
-       // });
+        //$('#main-view').fadeIn(4000);
         
       });
 	

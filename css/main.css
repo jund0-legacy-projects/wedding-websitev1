@@ -107,6 +107,9 @@ hr{
 section{
     position:relative;
 }
+main{
+    min-height:1500px;
+}
 footer{
     height:50px;
     position:relative;
@@ -153,7 +156,8 @@ footer{
 }
 
 .succulent-flower{
-    height:150px;
+    height:250px;
+    position:relative;
 }
 
 .header-container{
@@ -161,8 +165,8 @@ footer{
 }
 
 .section-content{
-    padding: 5% 0 0;
-    margin: 5%;
+    padding: 5% 0 ;
+    margin: 0 5%;
     position:relative;
 }
     .section-content p{
@@ -184,6 +188,9 @@ footer{
           margin:auto;
           opacity:1;
     }
+.intro-section{
+    padding: 10% 0 0;
+}    
 .final-section-content{
     padding: 10% 0;
 }
@@ -654,7 +661,7 @@ background-color:transparent;
     background-image: url(../img/wedding_party/b/a_h.jpg);
 }
 .bm-4{
-    background-image: url(../img/wedding_party/b/k_s.jpg);
+    background-image: url(../img/wedding_party/b/k_s.jpg);  
 }
 
 .gm-1{
@@ -685,12 +692,12 @@ background-color:transparent;
     #wedding-party.nav-tabs>li.active>a:focus{
         color:#fff;
         background-color: rgb(124, 156, 102);
-        border: 1px solid rgb(106, 137, 83);
+        /*border: 1px solid rgb(106, 137, 83);*/
     }
 
     #wedding-party .nav>li>a:hover, .nav>li>a:focus{
         background-color: rgba(124, 156, 102,0.75);
-        border: 1px solid rgb(106, 137, 83);
+        /*border: 1px solid rgb(106, 137, 83);*/
     }
 
     #wedding-party .nav-tabs>li{
