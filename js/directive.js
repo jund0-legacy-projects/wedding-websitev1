@@ -14,17 +14,10 @@ directives.directive('mainNav', function(){
 	return {
 		link: function(scope,element, attributes){
 
-			//console.log(element.find('a'));
 			var mainNavLinks = element.find('a');
 			mainNavLinks.bind('click', function(){
-				//console.log('clicked main nav links');
-				//console.log(angular.element('#main-landing'));
 				var mainLanding = angular.element('#main-view');
 				
-				$('#content-overlay').fadeIn(500,function(){
-					
-
-				});
 				$('html, body').animate({
                         scrollTop: mainLanding.offset().top+5
                     }, 1000);
@@ -233,10 +226,12 @@ directives.directive('mySlideController', ['$swipe',
 directives.directive("loader", function ($rootScope) {
     return function ($scope, element, attrs) {
         $scope.$on("loader_show", function () {
-            return element.show();
+            //return element.css({'opacity': '1'}).show();
+            return element.fadeIn(500);
         });
         return $scope.$on("loader_hide", function () {
-            return element.hide();
+            //return element.css({'opacity': '0'}).hide();
+            return element.fadeOut(500);
         });
     };
 }
