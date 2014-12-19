@@ -1,0 +1,17 @@
+<section class="container-fluid section-content intro-section">			
+	<h1 class="text-center">Gallery</h1>
+	<h2 class="text-center">Engagent Shoot</h2>
+	<div class="container">
+		
+		<p class="text-center">
+			If you have any questions or concerns, please email us at fredolovesjoanna@gmail.com or selecting the envelope.
+		</p>
+		<ul ng-controller="GalleryCtrl">
+			<li ng-repeat="image in images">
+		    	<a ng-click="openLightboxModal($index)">
+		      		<img ng-src="{{image.thumbUrl}}" class="img-thumbnail" alt="">
+		    	</a>
+		  	</li>
+		</ul>	
+	</div>				
+</section>

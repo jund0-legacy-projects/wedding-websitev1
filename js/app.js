@@ -1,6 +1,6 @@
 "use strict"
 
-var app = angular.module('fljApp', ['ngRoute', 'ui.bootstrap', 'alj.controllers', 'alj.directives', 'alj.services']);
+var app = angular.module('fljApp', ['ngRoute', 'ui.bootstrap', 'bootstrapLightbox', 'alj.controllers', 'alj.directives', 'alj.services']);
 
 
 app.factory('httpInterceptor', function ($q, $rootScope, $log) {
@@ -51,6 +51,7 @@ app.config(function($routeProvider, $httpProvider){
 	$routeProvider
 		.when('/home', {templateUrl: 'templates/partials/aboutus.html'})
 		.when('/ourparty', {templateUrl: 'templates/partials/weddingparty.html'})
+        .when('/ourgallery', {templateUrl: 'templates/partials/gallery.html'})
 		.when('/locations', {templateUrl: 'templates/partials/eventlocations.html'})
 		.when('/contact', {templateUrl: 'templates/partials/contactus.html'})
 		.otherwise({ redirectTo : '/home', templateUrl: 'templates/partials/aboutus.html'});
