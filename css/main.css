@@ -747,6 +747,37 @@ background-color:transparent;
     #all.slide{position:relative;}
     .slide,.hide{transition: all 0.2s ease;}
 
+
+/***/
+.hotel{
+    background-image: url(../img/hilton.jpg);
+}
+#registry-list{
+    min-height: 175px;
+}
+.registry{
+    height:150px;
+    width:150px;
+    display:inline-block;
+    border: solid 2px rgb(106, 137, 83);
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transtion: all .4s ease-in-out;
+    transition: all 1s ease-in-out;
+    border-radius:150px;
+    
+}
+.registry:hover{
+    height:175px;
+    width:175px;
+    border-radius:175px;
+}
+.registry img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .row-offcanvas {
     position: relative;
