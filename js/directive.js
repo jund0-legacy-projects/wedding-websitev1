@@ -28,7 +28,7 @@ directives.directive('mainNav', function(){
 				scope.style = function () {
 					return { 
 	                 	'height': '50px', 
-						'width': '500px',
+						'width': '550px',
 						'border-radius' : '25px'
 	                };
 				};
