@@ -52,6 +52,8 @@
 			        <li class="hidden" ><span>|</span></li>
 			        <li class="hidden" ng-class=" { active: isActive('/ourgallery') }"><a href="#">Our Gallery</a></li>
 			        <li ><span>|</span></li>
+			        <li ng-class=" { active: isActive('/registry') }"><a href="#/registry" >Gift Registry</a></li>
+			        <li ><span>|</span></li>
 			        <li ng-class=" { active: isActive('/locations') }"><a href="#/locations" >Wedding Day Information</a></li>
 			        <li ><span>|</span></li>
 			        <li ng-class=" { active: isActive('/contact') }"><a href="#/contact">Contact Us</a></li>   
@@ -71,6 +73,7 @@
 				<li ng-class=" { active: isActive('/home') }"><a href="#/home" ng-click="toggleMenu('#/home')">Our Story</a></li>
 				<li ng-class=" { active: isActive('/ourparty') }"><a href="#/ourparty" ng-click="toggleMenu()">Our Wedding Party</a></li>
 				<li class="hidden" ng-class=" { active: isActive('/ourgallery') }"><a href="#" ng-click="toggleMenu()">Our Gallery</a></li>
+				 <li ng-class=" { active: isActive('/registry') }"><a href="#/registry" ng-click="toggleMenu()">Wedding Day Information</a></li>
 				 <li ng-class=" { active: isActive('/locations') }"><a href="#/locations" ng-click="toggleMenu()">Wedding Day Information</a></li>
 				 <li ng-class=" { active: isActive('/contact') }"><a href="#/contact" ng-click="toggleMenu()">Contact Us</a></li>
 			</ul>
