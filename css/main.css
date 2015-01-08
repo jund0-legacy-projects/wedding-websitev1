@@ -747,6 +747,11 @@ background-color:transparent;
     #all.slide{position:relative;}
     .slide,.hide{transition: all 0.2s ease;}
 
+
+/***/
+.hotel{
+    background-image: url(../img/hilton.jpg);
+}
 @media screen and (max-width: 767px) {
   .row-offcanvas {
     position: relative;

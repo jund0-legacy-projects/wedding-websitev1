@@ -52,6 +52,7 @@ app.config(function($routeProvider, $httpProvider){
 		.when('/home', {templateUrl: 'templates/partials/aboutus.html'})
 		.when('/ourparty', {templateUrl: 'templates/partials/weddingparty.html'})
 		.when('/locations', {templateUrl: 'templates/partials/eventlocations.html'})
+        .when('/registry', {templateUrl: 'templates/partials/registry.html'})
 		.when('/contact', {templateUrl: 'templates/partials/contactus.html'})
 		.otherwise({ redirectTo : '/home', templateUrl: 'templates/partials/aboutus.html'});
 });
