@@ -5,6 +5,7 @@ var controllers = angular.module('alj.controllers', []);
 controllers.controller('MainCtrl', function($scope, $window, $location, $route, $log){
 
 
+
 	/*SideMenu*/
 	$scope.showmenu=false;
 	$scope.toggleMenu = function(url){
@@ -53,10 +54,10 @@ controllers.controller('MainCtrl', function($scope, $window, $location, $route, 
 	
 	$scope.$on("$locationChangeStart", function(event, next, current) {  
         //$scope.loading = true;
-        console.log('locationstart');
+        //console.log('locationstart');
         //console.log(event);
-        console.log(next);
-        console.log(current);
+        //console.log(next);
+        //console.log(current);
 
         //$('#main-view').fadeOut(4000);
 	//$('#content-overlay').fadeOut(2000);
@@ -70,7 +71,7 @@ controllers.controller('MainCtrl', function($scope, $window, $location, $route, 
         //$log.info("location changing to:" + next); 
         //$scope.loading = false;
         //$('#main-view').fadeIn(4000);
-        
+        $scope .$watch(function(){return $window.innerHeight;}, function(value){ console.log('height: '+value); })
       });
 	
 	/*** Loading */
