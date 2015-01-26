@@ -100,6 +100,7 @@ h1{
 }
 h2,h3{
     font-family: 'ostrich_sans_rounded';
+    letter-spacing: 2px;
 }
 hr{
     background:#d4d1b5;
@@ -119,6 +120,13 @@ footer{
         margin:0;
     }
 
+
+.no-margin:{
+  margin:0;  
+}
+.copy{
+    letter-spacing: 1px;
+}
 /* This parent can be any width and height */
 .block {
   text-align: center;
@@ -766,12 +774,14 @@ background-color:transparent;
     -o-transtion: all .4s ease-in-out;
     transition: all 1s ease-in-out;
     border-radius:150px;
+    overflow:hidden;
     
 }
 .registry:hover{
     height:175px;
     width:175px;
     border-radius:175px;
+    padding:10px;
 }
 .registry img{
     max-width: 100%;
